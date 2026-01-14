@@ -27,6 +27,13 @@ app.use("/api/auth", authRoutes);
 const userRoute = require("./routes/userRoute");
 app.use("/api",userRoute);
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "CodeCampus Backend is running 🚀"
+  });
+});
+
 const PORT = process.env.PORT || 5001;
 
 mongoose.connect(process.env.MONGO_URI)
