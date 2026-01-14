@@ -18,7 +18,7 @@ const CreateAssignment = () => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    dueDate: '',
+    due: '',
     maxMarks: 100,
     constraints: '',
     example: '',
@@ -42,7 +42,7 @@ const CreateAssignment = () => {
     
     if (isValid) {
       const formattedDate = date.toISOString().split('T')[0];
-      setFormData({...formData, dueDate: formattedDate});
+      setFormData({...formData, due: formattedDate});
     }
   };
 
@@ -64,7 +64,7 @@ const CreateAssignment = () => {
         constraints: formData.constraints,
         example: formData.example,
         language: formData.language,
-        due: formData.dueDate,
+        due: formData.due,
         maxMarks: formData.maxMarks
       }, token);
       
