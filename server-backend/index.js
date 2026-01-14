@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://code-campus-rho.vercel.app',
+    origin: ['https://code-campus-eta.vercel.app','http://localhost:5173'],
     credentials: true,
     methods: ['GET', 'POST','PUT', 'OPTIONS','DELETE'],
     allowedHeaders: ['Content-Type','Authorization']
