@@ -21,7 +21,6 @@ const ViewSubmissions = () => {
       try {
         const sub = await fetchSubmissions(token,decoded_id);
         setSubmissions(sub.data);
-        console.log(sub.data);
       } catch (error) {
         console.log("Error fetching data, ", error);
       }
